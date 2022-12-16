@@ -1,0 +1,45 @@
+.stats{
+    
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.itemList {
+    background-color: #f3f6f9;
+    border: solid;
+    margin: 0 0;
+    padding: 60px 0px 60px;
+    font-size: 20px;
+    text-align: center;
+    width : 250px;
+}
+
+.profile {
+    border: solid;
+}
+
+.description{
+    text-align: center;
+        
+}
+
+.quantity{
+    font-weight: bold;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.imgLogo{
+    width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: solid;
+}

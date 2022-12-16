@@ -1,0 +1,47 @@
+.stats1{
+    
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    margin: 0 0;
+    padding: 0 0;
+}
+
+.itemList {
+    background-color: #f3f6f9;
+    border: solid;
+    margin: 0 0;
+    padding: 60px 0px 60px;
+    font-size: 20px;
+    text-align: center;
+    width : 250px;
+}
+
+.title {
+  
+    text-align: center;
+}
+
+.statistics{
+    text-align: center;
+    border: solid;
+}
+
+.cyan{
+    background-color: cyan;
+}
+
+.magenta{
+    background-color: magenta;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.purple {
+    background-color: purple;
+}

@@ -1,0 +1,23 @@
+.list {
+    display: flex;
+    align-items: center;
+    border: solid;
+}
+
+.itemList {
+    
+    
+    background-color: #f3f6f9;
+    
+    margin: 0 0;
+    padding: 10px 0px 10px;
+    font-size: 20px;
+    text-align: center;
+    width : 550px;
+}
+
+.imgLogo{
+    width: 100px;
+    height: 100px;
+    border: solid;
+}
