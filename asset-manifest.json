@@ -1,13 +1,13 @@
 {
-  "files": {
-    "main.css": "/react-homework-template/static/css/main.7acaea2f.css",
-    "main.js": "/react-homework-template/static/js/main.07d3183d.js",
-    "index.html": "/react-homework-template/index.html",
-    "main.7acaea2f.css.map": "/react-homework-template/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/react-homework-template/static/js/main.07d3183d.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
-  ]
+  "main.css": "/react-homework-template/static/css/main.c3acbfa4.chunk.css",
+  "main.js": "/react-homework-template/static/js/main.4451214f.chunk.js",
+  "main.js.map": "/react-homework-template/static/js/main.4451214f.chunk.js.map",
+  "static/js/1.67fed97b.chunk.js": "/react-homework-template/static/js/1.67fed97b.chunk.js",
+  "static/js/1.67fed97b.chunk.js.map": "/react-homework-template/static/js/1.67fed97b.chunk.js.map",
+  "runtime~main.js": "/react-homework-template/static/js/runtime~main.270f9b06.js",
+  "runtime~main.js.map": "/react-homework-template/static/js/runtime~main.270f9b06.js.map",
+  "static/css/main.c3acbfa4.chunk.css.map": "/react-homework-template/static/css/main.c3acbfa4.chunk.css.map",
+  "index.html": "/react-homework-template/index.html",
+  "precache-manifest.aa307a3934b1ac5edc0077c4e1892c93.js": "/react-homework-template/precache-manifest.aa307a3934b1ac5edc0077c4e1892c93.js",
+  "service-worker.js": "/react-homework-template/service-worker.js"
 }
