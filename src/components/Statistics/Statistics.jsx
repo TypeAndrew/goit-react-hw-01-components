@@ -1,23 +1,14 @@
 import React from 'react'
 import styles from './Statistics.module.css';
-import data from './data.json';
+import PropTypes from "prop-types";
 
-let statData = [];
-let findValue;
-data.forEach((element) => {
-    findValue = statData.find(el => el.label === element.label);
-    if (findValue === undefined) {
-        statData.push(element);
-    } else {
-        findValue.percentage += element.percentage;
-    }
-});
+
 
 let getRandomHexColor = function() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
   
-export const Statistics = () => {
+export const Statistics = ({statData }) => {
  
  return (
    <section className={styles.statistics}>
@@ -26,9 +17,9 @@ export const Statistics = () => {
         {statData.map(element =>
             <li style={{
              backgroundColor: getRandomHexColor()}} className={styles.itemList} key={element.id}>
-            <span class="label">{element.label}</span>
+            <span className="label">{element.label}</span>
             <span>  </span>
-            <span class="percentage">{element.percentage}%</span>      
+            <span className="percentage">{element.percentage}%</span>      
             </li>
         )}
         </ul>
@@ -36,3 +27,13 @@ export const Statistics = () => {
     );
      
 };
+
+Statistics.propTypes = {
+  statData: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+      })
+  )
+}

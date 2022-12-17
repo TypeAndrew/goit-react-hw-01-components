@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './TransactionHistory.module.css';
+import PropTypes from "prop-types";
 
 export const TransactionHistoryHeader = ({ transactions }) => {
     
@@ -38,3 +39,14 @@ export const TransactionHistoryHeader = ({ transactions }) => {
     );
            
 };    
+
+TransactionHistoryHeader.propTypes = {
+  transactions: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,  
+      })
+  )
+}

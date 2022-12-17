@@ -8,4 +8,5 @@ tbody tr:nth-child(even) {
 
 .tableHead{
     background-color: blue;
+    color: white;
 }

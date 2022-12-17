@@ -1,8 +1,8 @@
 import React from 'react'
-import user from './user.json';
 import styles from './Profile.module.css';
-console.log(styles);
-export const Profile = () => {
+import PropTypes from "prop-types";
+
+export const Profile = ({user}) => {
   
   return (
     
@@ -16,25 +16,25 @@ export const Profile = () => {
             />
           </div>
           <p className={styles.name}>{user.username}</p>
-          <p class="tag">{user.tag}</p>
-          <p class="location">{user.location}</p>
+          <p className="tag">{user.tag}</p>
+          <p className="location">{user.location}</p>
         </div>
 
         <ul className={styles.stats}>
           <li className={styles.itemList}>
-            <span class="label">Followers</span>
+            <span className="label">Followers</span>
             <p>
               <span className={styles.quantity}> {user.stats.followers}</span>
             </p>
           </li>
           <li className={styles.itemList}>
-            <span class="label">Views</span>
+            <span className="label">Views</span>
             <p>
               <span className={styles.quantity}> {user.stats.views}</span>
             </p>
           </li>
           <li className={styles.itemList}>
-            <span class="label">Likes</span>
+            <span className="label">Likes</span>
             <p>
           <span className={styles.quantity}> {user.stats.likes}</span>
           </p>
@@ -43,4 +43,19 @@ export const Profile = () => {
       </div>
   
   );
+};
+
+Profile.propTypes = {
+  user: PropTypes.shape({
+    username: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    avatar: PropTypes.string.isRequired,
+    tag: PropTypes.string.isRequired,
+    stats: PropTypes.shape({
+      followers: PropTypes.number.isRequired,
+      views: PropTypes.number.isRequired,
+      likes: PropTypes.number.isRequired,
+    })
+  }),
+  
 };
