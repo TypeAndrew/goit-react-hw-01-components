@@ -1,39 +1,37 @@
 import styles from './Statistics.module.css';
+import data from './data.json';
 
+let statData = [];
+let findValue;
+data.forEach((element) => {
+    findValue = statData.find(el => el.label === element.label);
+    if (findValue === undefined) {
+        statData.push(element);
+    } else {
+        findValue.percentage += element.percentage;
+    }
+});
+
+let getRandomHexColor = function() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
+}
+  
 export const Statistics = () => {
-  return (
-    <div
-      style={{
-        
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      <section className={styles.statistics}>
-        <h2 className={styles.title}>Upload stats</h2>
-
-        <ul className={styles.stats1}>
-          <li className={styles.itemList+" "+styles.blue}>
-            <span class="label">.docx</span>
-            <span class="percentage"> 4%</span>
-          </li>
-          <li className={styles.itemList+" "+styles.purple}>
-            <span class="label">.mp3</span>
-            <span class="percentage"> 14%</span>
-          </li>
-          <li className={styles.itemList+" "+styles.magenta}>
-            <span class="label">.pdf</span>
-            <span class="percentage"> 41%</span>
-          </li>
-          <li className={styles.itemList+" "+styles.cyan}>
-            <span class="label">.mp4</span>
-            <span class="percentage"> 12%</span>
-          </li>
+ 
+ return (
+   <section className={styles.statistics}>
+     <h2 className={styles.title}>Upload stats</h2>
+        <ul className={styles.list }>
+        {statData.map(element =>
+            <li style={{
+             backgroundColor: getRandomHexColor()}} className={styles.itemList} key={element.id}>
+            <span class="label">{element.label}</span>
+            <span>  </span>
+            <span class="percentage">{element.percentage}%</span>      
+            </li>
+        )}
         </ul>
-      </section>
-    </div>
-  );
+    </section>  
+    );
+     
 };

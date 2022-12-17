@@ -1,4 +1,4 @@
-.stats1{
+.list{
     
     list-style: none;
     display: flex;
@@ -14,34 +14,25 @@
     background-color: #f3f6f9;
     border: solid;
     margin: 0 0;
-    padding: 60px 0px 60px;
+    padding: 30px 0px 30px;
     font-size: 20px;
     text-align: center;
     width : 250px;
 }
 
 .title {
-  
+    display: flex;
+    justify-content: center;
+    border: solid;
     text-align: center;
+    margin-bottom: 0;
+    
+    max-width: 1020px;
+    margin: 0 auto;
 }
 
 .statistics{
     text-align: center;
-    border: solid;
+   
 }
 
-.cyan{
-    background-color: cyan;
-}
-
-.magenta{
-    background-color: magenta;
-}
-
-.blue {
-    background-color: blue;
-}
-
-.purple {
-    background-color: purple;
-}
