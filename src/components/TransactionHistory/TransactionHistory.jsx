@@ -1,18 +1,20 @@
+import styles from './TransactionHistory.module.css';
+
 export const TransactionHistoryHeader = ({ transactions }) => {
     
     return (
     <div className='wrapper' 
         style={{
-        height: '100vh',
+        
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        fontSize: 40,
+        fontSize: 30,
         color: '#010101'
             }}
      >
     <table> 
-        <thead>
+        <thead className={styles.tableHead}>
         <tr>
         <td>ID</td>
         <td>type</td>

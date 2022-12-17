@@ -4,14 +4,16 @@ console.log(styles);
 export const Profile = () => {
   
   return (
-    <div >
+    
       <div className={styles.profile}>
         <div className={styles.description}>
-          <img className={styles.imgLogo}
+          <div className={styles.imgLogo}>
+          <img 
             src={user.avatar}
             alt="User avatar"
-            class="avatar"
-          />
+            className={styles.avatar}
+            />
+          </div>
           <p className={styles.name}>{user.username}</p>
           <p class="tag">{user.tag}</p>
           <p class="location">{user.location}</p>
@@ -38,6 +40,6 @@ export const Profile = () => {
           </li>
         </ul>
       </div>
-    </div>
+  
   );
 };
