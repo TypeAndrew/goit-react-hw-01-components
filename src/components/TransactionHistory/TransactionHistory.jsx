@@ -18,16 +18,16 @@ export const TransactionHistoryHeader = ({ transactions }) => {
     <table> 
         <thead className={styles.tableHead}>
         <tr>
-        <td>ID</td>
-        <td>type</td>
-        <td>amount</td>
-        <td>currency</td>           
+       
+        <td>TYPE</td>
+        <td>AMOUNT</td>
+        <td>CURRENCY</td>           
         </tr>
         </thead>
         <tbody>
         {transactions.map(element =>
             <tr key={element.id}>
-            <td>{element.id}</td>
+            
             <td>{element.type}</td>
             <td>{element.amount}</td>
             <td>{element.currency}</td>
@@ -43,7 +43,7 @@ export const TransactionHistoryHeader = ({ transactions }) => {
 TransactionHistoryHeader.propTypes = {
   transactions: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+  
       type: PropTypes.string.isRequired,
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,  

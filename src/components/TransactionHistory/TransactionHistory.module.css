@@ -9,4 +9,10 @@ tbody tr:nth-child(even) {
 .tableHead{
     background-color: blue;
     color: white;
+   
+}
+
+td {
+    width: 350px;
+    text-align: center;
 }
