@@ -15,7 +15,7 @@ export const App = () => {
     <Profile username={username} tag={tag} location={location} avatar={avatar} stats={stats} />
     <Statistics statHeader="Upload data" statData={statData}/>
     <FriendList friends={friends}> 
-     <FriendListItem/>            
+     <FriendListItem />            
     </FriendList>            
     <TransactionHistoryHeader transactions={transactions} />
      </>       
