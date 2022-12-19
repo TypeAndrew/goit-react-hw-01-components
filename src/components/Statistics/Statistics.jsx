@@ -8,11 +8,11 @@ let getRandomHexColor = function() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
   
-export const Statistics = ({statHeader,statData }) => {
+export const Statistics = ({title,statData }) => {
  
  return (
    <section className={styles.statistics}>
-     {statHeader && <h2 className={styles.title}>{statHeader}</h2>}
+     {title && <h2 className={styles.title}>{title}</h2>}
         <ul className={styles.list }>
         {statData.map(element =>
             <li style={{
@@ -36,5 +36,5 @@ Statistics.propTypes = {
       percentage: PropTypes.number.isRequired,
       })
   ),
-  statHeader: PropTypes.string,
+  title: PropTypes.string,
 }
