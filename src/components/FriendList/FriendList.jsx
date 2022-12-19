@@ -9,7 +9,7 @@ export const FriendList = ({ friends }) => {
         <ul className={styles.list }>
         
                 {friends.map(element => 
-                    FriendListItem({ element })
+                    <FriendListItem key={element.id} id={ element.id } isOnline={ element.isOnline } avatar={element.avatar} name={element.name}/>
                 )};
       
         </ul>
@@ -17,16 +17,16 @@ export const FriendList = ({ friends }) => {
     );
 };    
 
-export const FriendListItem = ({element}) => {
+export const FriendListItem = ({id,isOnline,avatar,name}) => {
     
     return (
         
-        <li className={styles.itemList } key={element.id}>
+        <li className={styles.itemList } key={id}>
             <div className={styles.blockList}>
-                {element.isOnline === true
+                {isOnline === true
                     ? <span className={styles.dotGreen}></span>
                     : <span className={styles.dotRed}></span>}
-                <img className={styles.imgLogo} src={element.avatar} alt={element.name}></img>{element.name}</div></li>
+                <img className={styles.imgLogo} src={avatar} alt={name}></img>{name}</div></li>
         )
 
 };                       
@@ -40,6 +40,15 @@ FriendList.propTypes = {
             avatar: PropTypes.string.isRequired,
             name: PropTypes.string.isRequired,
         })
-   )
+    ),
+}
+
+FriendListItem.propTypes = {
+
+            id: PropTypes.number.isRequired,
+            isOnline: PropTypes.bool.isRequired,
+            avatar: PropTypes.string.isRequired,
+            name: PropTypes.string.isRequired,
     
+  
 }
